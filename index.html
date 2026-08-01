@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>Happy Friendship Day, Chingu 💖</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- floating background layer: hearts + sparkles, always on -->
+<div class="bg-fx" id="bgFx" aria-hidden="true"></div>
+
+<!-- ================= PAGE 1 : WELCOME ================= -->
+<section class="page page--active" id="page1">
+  <div class="critter critter--tom critter--left">
+    <svg viewBox="0 0 200 260" class="critter-svg">
+      <ellipse cx="100" cy="230" rx="55" ry="14" fill="rgba(0,0,0,0.08)"/>
+      <path d="M45 120 Q40 200 60 240 L140 240 Q160 200 155 120 Z" fill="#B9D9F5"/>
+      <circle cx="100" cy="95" r="62" fill="#8FB8E8"/>
+      <path d="M55 55 L40 5 L80 45 Z" fill="#8FB8E8"/>
+      <path d="M145 55 L160 5 L120 45 Z" fill="#8FB8E8"/>
+      <path d="M55 55 L46 20 L74 47 Z" fill="#F6B4C9"/>
+      <path d="M145 55 L154 20 L126 47 Z" fill="#F6B4C9"/>
+      <circle cx="78" cy="92" r="12" fill="#fff"/>
+      <circle cx="122" cy="92" r="12" fill="#fff"/>
+      <circle cx="80" cy="94" r="5" fill="#2b2b2b" class="blink"/>
+      <circle cx="120" cy="94" r="5" fill="#2b2b2b" class="blink"/>
+      <ellipse cx="100" cy="112" rx="16" ry="10" fill="#fff"/>
+      <path d="M100 108 Q95 118 88 116 M100 108 Q105 118 112 116" stroke="#2b2b2b" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M100 112 L100 118" stroke="#2b2b2b" stroke-width="2"/>
+      <ellipse cx="62" cy="105" rx="8" ry="5" fill="#F6B4C9" opacity="0.7"/>
+      <ellipse cx="138" cy="105" rx="8" ry="5" fill="#F6B4C9" opacity="0.7"/>
+      <path class="wave-arm" d="M55 150 Q10 130 15 95 Q18 80 30 85 Q25 105 45 125 Z" fill="#8FB8E8"/>
+      <path d="M60 150 Q90 165 120 150" stroke="#5f8fc9" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <div class="critter critter--jerry critter--right">
+    <svg viewBox="0 0 200 240" class="critter-svg">
+      <ellipse cx="100" cy="215" rx="50" ry="13" fill="rgba(0,0,0,0.08)"/>
+      <path d="M55 110 Q48 180 65 225 L135 225 Q152 180 145 110 Z" fill="#E8B98A"/>
+      <circle cx="100" cy="90" r="55" fill="#E8B98A"/>
+      <circle cx="55" cy="60" r="20" fill="#E8B98A"/>
+      <circle cx="145" cy="60" r="20" fill="#E8B98A"/>
+      <circle cx="55" cy="60" r="10" fill="#F6D3C4"/>
+      <circle cx="145" cy="60" r="10" fill="#F6D3C4"/>
+      <ellipse cx="100" cy="100" rx="30" ry="24" fill="#F9E6D4"/>
+      <circle cx="80" cy="86" r="11" fill="#fff"/>
+      <circle cx="120" cy="86" r="11" fill="#fff"/>
+      <circle cx="82" cy="88" r="5" fill="#2b2b2b" class="blink"/>
+      <circle cx="118" cy="88" r="5" fill="#2b2b2b" class="blink"/>
+      <ellipse cx="100" cy="102" rx="8" ry="6" fill="#2b2b2b"/>
+      <path d="M100 106 Q95 114 88 112 M100 106 Q105 114 112 112" stroke="#2b2b2b" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M65 100 L35 95 M65 105 L33 108 M135 100 L165 95 M135 105 L167 108" stroke="#c98a55" stroke-width="1.5"/>
+      <path class="wave-arm-r" d="M145 145 Q190 125 185 90 Q182 75 170 80 Q175 100 155 120 Z" fill="#E8B98A"/>
+      <path d="M65 145 Q95 158 130 145" stroke="#c98a55" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <div class="glass-card welcome-card">
+    <p class="eyebrow">💖 for my chingu</p>
+    <h1 class="script-title">Oyee Chingu! 💖</h1>
+    <p class="body-text">I made something for you...</p>
+    <p class="body-text">Do you wanna see? 🥺</p>
+    <div class="btn-row">
+      <button class="btn btn--primary" id="yesBtn">Yes 💖</button>
+      <button class="btn btn--ghost" id="noBtn">No 🙈</button>
+    </div>
+  </div>
+
+  <div class="popup-overlay" id="noPopupOverlay">
+    <div class="glass-card popup-card">
+      <div class="tom-angry">😾</div>
+      <h2 class="script-title small">How dare you? 😤</h2>
+      <button class="btn btn--primary" id="goBackBtn">Go Back</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PAGE 2 : WISH ================= -->
+<section class="page" id="page2">
+  <div class="photo-bg" style="background-image:url('images/image1.jpeg')"></div>
+  <div class="photo-bg-overlay"></div>
+  <div class="glass-card wish-card">
+    <h1 class="script-title">Happy Friendship Day to my Chingu❤️</h1>
+    <button class="btn btn--primary" id="toPage3">Next ➜</button>
+  </div>
+</section>
+
+<!-- ================= PAGE 3 : MEMORIES ================= -->
+<section class="page" id="page3">
+  <div class="page-inner">
+    <h1 class="script-title heading-onlight">Our Little Memories 📸</h1>
+    <p class="subtext">tap a card to flip it, tap the photo to see it bigger ✨</p>
+
+    <div class="memory-grid" id="memoryGrid">
+      <!-- cards injected by JS -->
+    </div>
+
+    <button class="btn btn--primary btn--wide" id="toPage4">One Last Thing 💌</button>
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">✕</button>
+    <img id="lightboxImg" src="" alt="memory photo">
+  </div>
+</section>
+
+<!-- ================= PAGE 4 : FINAL ================= -->
+<section class="page" id="page4">
+  <div class="critter critter--tom critter--envL">
+    <svg viewBox="0 0 140 180" class="critter-svg small-critter">
+      <ellipse cx="70" cy="165" rx="38" ry="10" fill="rgba(0,0,0,0.08)"/>
+      <path d="M32 85 Q28 140 42 170 L98 170 Q112 140 108 85 Z" fill="#B9D9F5"/>
+      <circle cx="70" cy="65" r="44" fill="#8FB8E8"/>
+      <path d="M38 38 L28 5 L58 32 Z" fill="#8FB8E8"/>
+      <path d="M102 38 L112 5 L82 32 Z" fill="#8FB8E8"/>
+      <circle cx="56" cy="64" r="9" fill="#fff"/>
+      <circle cx="84" cy="64" r="9" fill="#fff"/>
+      <circle cx="57" cy="65" r="3.5" fill="#2b2b2b"/>
+      <circle cx="83" cy="65" r="3.5" fill="#2b2b2b"/>
+      <ellipse cx="70" cy="78" rx="11" ry="7" fill="#fff"/>
+      <path d="M70 82 L70 87" stroke="#2b2b2b" stroke-width="1.5"/>
+    </svg>
+  </div>
+  <div class="critter critter--jerry critter--envR">
+    <svg viewBox="0 0 140 170" class="critter-svg small-critter">
+      <ellipse cx="70" cy="155" rx="35" ry="9" fill="rgba(0,0,0,0.08)"/>
+      <path d="M38 78 Q33 128 47 160 L93 160 Q107 128 102 78 Z" fill="#E8B98A"/>
+      <circle cx="70" cy="63" r="39" fill="#E8B98A"/>
+      <circle cx="38" cy="40" r="14" fill="#E8B98A"/>
+      <circle cx="102" cy="40" r="14" fill="#E8B98A"/>
+      <ellipse cx="70" cy="70" rx="21" ry="17" fill="#F9E6D4"/>
+      <circle cx="56" cy="60" r="8" fill="#fff"/>
+      <circle cx="84" cy="60" r="8" fill="#fff"/>
+      <circle cx="57" cy="61" r="3.5" fill="#2b2b2b"/>
+      <circle cx="83" cy="61" r="3.5" fill="#2b2b2b"/>
+      <ellipse cx="70" cy="72" rx="5" ry="4" fill="#2b2b2b"/>
+    </svg>
+  </div>
+
+  <div class="envelope-wrap" id="envelopeWrap">
+    <p class="click-hint" id="clickHint">Click the envelope 💌</p>
+    <div class="envelope" id="envelope">
+      <div class="envelope-back"></div>
+      <div class="letter-peek"></div>
+      <div class="envelope-flap"></div>
+    </div>
+  </div>
+
+  <div class="letter-overlay" id="letterOverlay">
+    <div class="letter-card" id="letterCard">
+      <button class="lightbox-close letter-close" id="letterClose">✕</button>
+      <div class="letter-content">
+        <h2 class="script-title">To My Chingu</h2>
+        <p>It all began on a quiet day,<br>
+        First bench, a new city, a world so strange.<br>
+        New faces, unfamiliar roads,<br>
+        A heart searching for a place to belong.</p>
+
+        <p>Then you smiled and asked my name,<br>
+        A simple moment that changed everything.<br>
+        You called me <strong>"Mangu,"</strong><br>
+        And I called you <strong>"Chingu,"</strong><br>
+        A friendship was born without us even knowing.</p>
+
+        <p>From making notes together<br>
+        To making hostel lists together,<br>
+        From endless Snap streaks,<br>
+        To Instagram reels that said, <em>"This is so us."</em></p>
+
+        <p>From discussing engineering colleges,<br>
+        To helping each other find internships,<br>
+        From meeting every single day,<br>
+        To waiting for messages and calls.</p>
+
+        <p>Life has changed.<br>
+        Our paths have become busier,<br>
+        Our conversations sometimes shorter,<br>
+        Our meetings fewer.</p>
+
+        <p>But whenever I see you,<br>
+        Time quietly turns back.<br>
+        For a moment,<br>
+        We're still those two girls from 11th and 12th,<br>
+        Laughing without worries,<br>
+        Dreaming without limits.</p>
+
+        <p>Thank you for staying,<br>
+        For listening, even when you're busy.<br>
+        For understanding my silence better than my words.<br>
+        For making time for me,<br>
+        Even while you're driving through life.</p>
+
+        <p>I don't know where the future will take us,<br>
+        But I know one thing —<br>
+        Some friendships aren't measured by distance or time.<br>
+        They're measured by the comfort of knowing<br>
+        That no matter how much life changes...</p>
+
+        <p>You'll always be my <strong>Chingu</strong>,<br>
+        And I'll always be your <strong>Mangu</strong>. ❤️</p>
+
+        <p class="letter-signoff">"Happy Friendship Day Bestie Rachana❤️<br><br>
+        Thank you for making my life happier.<br>
+        I hope we create many more memories together.<br><br>
+        Your,<br>
+        Mangu</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
